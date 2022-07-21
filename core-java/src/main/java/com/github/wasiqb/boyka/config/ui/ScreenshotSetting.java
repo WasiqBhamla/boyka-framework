@@ -14,20 +14,20 @@
  * copies or substantial portions of the Software.
  */
 
-package com.github.wasiqb.boyka.config;
+package com.github.wasiqb.boyka.config.ui;
 
 import lombok.Data;
 
 /**
- * Playback setting.
+ * Screenshot setting.
  *
  * @author Wasiq Bhamla
- * @since 17-Feb-2022
+ * @since 13-Jul-2022
  */
 @Data
-public class PlaybackSetting {
-    private int explicitWait    = 10;
-    private int implicitWait    = 1;
-    private int pageLoadTimeout = 30;
-    private int scriptTimeout   = 10;
+public class ScreenshotSetting {
+    private boolean enabled   = false;
+    private String  extension = "png";
+    private String  path      = "./screenshots";
+    private String  prefix    = "SCR";
 }

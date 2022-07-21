@@ -43,6 +43,10 @@ public enum Messages {
      */
     CONTENT_TYPE_NOT_SET ("Content type must be set before setting request body..."),
     /**
+     * Element not found.
+     */
+    ELEMENT_NOT_FOUND ("Element not found for locator {0}..."),
+    /**
      * Error executing request
      */
     ERROR_EXECUTING_REQUEST ("Error occurred while executing request..."),
@@ -59,6 +63,10 @@ public enum Messages {
      */
     ERROR_READING_FILE ("Error occurred reading file [{0}]..."),
     /**
+     * Error while saving screenshot.
+     */
+    ERROR_SAVING_SCREENSHOT ("Error saving screenshot"),
+    /**
      * Error writing file
      */
     ERROR_WRITING_FILE ("Error occurred writing file [{0}]..."),
@@ -70,6 +78,10 @@ public enum Messages {
      * Invalid browser selected
      */
     INVALID_BROWSER ("NONE Browser type is not allowed for Web platform..."),
+    /**
+     * No such key found
+     */
+    INVALID_HEADER_KEY ("No such key {0} found..."),
     /**
      * Invalid platform for operation
      */
@@ -99,17 +111,13 @@ public enum Messages {
      */
     PROTOCOL_REQUIRED_FOR_HOST ("Protocol is required for host [{0}]..."),
     /**
-     * User name required for cloud execution
-     */
-    USER_NAME_REQUIRED_FOR_CLOUD ("User name is required for cloud execution..."),
-    /**
      * Schema validation assert failure
      */
-    RESPONSE_SCHEMA_NOT_MATCHING("Schema validation assert failure..."),
-    /** 
-     * No such key found
+    RESPONSE_SCHEMA_NOT_MATCHING ("Schema validation assert failure..."),
+    /**
+     * User name required for cloud execution
      */
-    INVALID_HEADER_KEY ("No such key {0} found...");
+    USER_NAME_REQUIRED_FOR_CLOUD ("User name is required for cloud execution...");
 
     private final String message;
 

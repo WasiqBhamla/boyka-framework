@@ -14,35 +14,40 @@
  * copies or substantial portions of the Software.
  */
 
-package com.github.wasiqb.boyka.testng.web.pages;
+package com.github.wasiqb.boyka.testng.web.theinternet.pages;
 
-import static com.github.wasiqb.boyka.builders.Locator.buildLocator;
-import static org.openqa.selenium.By.id;
+import static org.openqa.selenium.By.linkText;
 
 import com.github.wasiqb.boyka.builders.Locator;
 import lombok.Getter;
 
 /**
- * Cart page.
+ * Home page.
  *
  * @author Wasiq Bhamla
- * @since 13-Mar-2022
+ * @since 13-Jul-2022
  */
 @Getter
-public class CartPage {
+public class HomePage {
     /**
-     * Gets Cart page instance.
+     * Home page instance.
      *
-     * @return Cart page instance
+     * @return {@link HomePage}
      */
-    public static CartPage cartPage () {
-        return new CartPage ();
+    public static HomePage homePage () {
+        return new HomePage ();
     }
 
-    private final Locator checkout = buildLocator ().web (id ("checkout"))
-        .build ();
-
-    private CartPage () {
-        // Avoid explicit class initialisation
+    /**
+     * Gets link locator based on the link name.
+     *
+     * @param linkText link name
+     *
+     * @return link locator
+     */
+    public Locator link (final String linkText) {
+        return Locator.buildLocator ()
+            .web (linkText (linkText))
+            .build ();
     }
 }
