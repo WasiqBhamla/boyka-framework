@@ -43,6 +43,7 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:
+          config-file: ./.github/codeql/codeql-config.yml
           languages: ${{ matrix.language }}
           # If you wish to specify custom queries, you can do so here or in a config file.
           # By default, queries listed here will override any specified in a config file.
@@ -61,9 +62,9 @@ jobs:
       #    and modify them (or add more) to build your code if your project
       #    uses a compiled language
 
-      #- run: |
-      #   make bootstrap
-      #   make release
+      # - run: |
+      #     make bootstrap
+      #     make release
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
